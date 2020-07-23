@@ -71,6 +71,12 @@ void UUINavWidget::NativeConstruct()
 
 void UUINavWidget::InitialSetup()
 {
+	//Checks if the Player Controller is still valid
+	if (UINavPC == nullptr)
+	{
+		ConfigureUINavPC();
+	}
+
 	//If widget was already setup, apply only certain steps
 	if (bCompletedSetup)
 	{
@@ -80,10 +86,6 @@ void UUINavWidget::InitialSetup()
 
 	bSetupStarted = true;
 	WidgetClass = GetClass();
-	if (UINavPC == nullptr)
-	{
-		ConfigureUINavPC();
-	}
 
 	FetchButtonsInHierarchy();
 	ReadyForSetup();
