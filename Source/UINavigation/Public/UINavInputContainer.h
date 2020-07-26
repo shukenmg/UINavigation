@@ -9,6 +9,7 @@
 #include "Data/RevertRebindReason.h"
 #include "Data/TargetColumn.h"
 #include "Blueprint/UserWidget.h"
+#include "Runtime/Launch/Resources/Version.h"
 #include "UINavInputContainer.generated.h"
 
 /**

@@ -12,6 +12,7 @@
 #include "Data/NavigationDirection.h"
 #include "InputCoreTypes.h"
 #include "Input/Reply.h"
+#include "Runtime/Launch/Resources/Version.h"
 #include "UINavPCComponent.generated.h"
 
 DECLARE_DELEGATE_OneParam(FMouseKeyDelegate, FKey);
