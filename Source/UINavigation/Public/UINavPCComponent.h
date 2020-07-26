@@ -200,6 +200,13 @@ public:
 		{EKeys::Gamepad_LeftY, {EKeys::Gamepad_LeftStick_Up, EKeys::Gamepad_LeftStick_Down}},
 		{EKeys::Gamepad_RightX, {EKeys::Gamepad_RightStick_Right, EKeys::Gamepad_RightStick_Left}},
 		{EKeys::Gamepad_RightY, {EKeys::Gamepad_RightStick_Up, EKeys::Gamepad_RightStick_Down}},
+		#if ENGINE_MINOR_VERSION < 23
+		{EKeys::MotionController_Left_Thumbstick_X, {EKeys::MotionController_Left_Thumbstick_Right, EKeys::MotionController_Left_Thumbstick_Left}},
+		{EKeys::MotionController_Left_Thumbstick_Y, {EKeys::MotionController_Left_Thumbstick_Up, EKeys::MotionController_Left_Thumbstick_Down}},
+		{EKeys::MotionController_Right_Thumbstick_X, {EKeys::MotionController_Right_Thumbstick_Right, EKeys::MotionController_Right_Thumbstick_Left}},
+		{EKeys::MotionController_Right_Thumbstick_Y, {EKeys::MotionController_Right_Thumbstick_Up, EKeys::MotionController_Right_Thumbstick_Down}},
+		#endif
+		#if ENGINE_MINOR_VERSION > 25
 		/*{EKeys::Daydream_Left_Thumbstick_X, {EKeys::Daydream_Left_Thumbstick_Right, EKeys::Daydream_Left_Thumbstick_Left}},
 		{EKeys::Daydream_Left_Thumbstick_Y, {EKeys::Daydream_Left_Thumbstick_Up, EKeys::Daydream_Left_Thumbstick_Down}},
 		{EKeys::Daydream_Right_Thumbstick_X, {EKeys::Daydream_Right_Thumbstick_Right, EKeys::Daydream_Right_Thumbstick_Left}},
@@ -224,6 +231,7 @@ public:
 		{EKeys::Vive_Left_Trackpad_Y, {EKeys::Vive_Left_Trackpad_Up, EKeys::Vive_Left_Trackpad_Down}},
 		{EKeys::Vive_Right_Trackpad_X, {EKeys::Vive_Right_Trackpad_Right, EKeys::Vive_Right_Trackpad_Left}},
 		{EKeys::Vive_Right_Trackpad_Y, {EKeys::Vive_Right_Trackpad_Up, EKeys::Vive_Right_Trackpad_Down}},
+		#endif
 	};
 
 	UFUNCTION(BlueprintCallable, BlueprintPure, Category = UINavController)
